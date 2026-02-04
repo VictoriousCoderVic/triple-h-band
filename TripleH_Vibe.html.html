@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triple H Band Limited | Official Portal</title>
+    
+    <meta name="description" content="Elite musical services specializing in Jazz, Gospel, Afro, and Pop. Statutory compliant under the Companies Act 2021.">
+    <meta property="og:title" content="Triple H Band Limited">
+    <meta property="og:description" content="Professional live music for elite events. Bookings: 0794176025">
+    <meta property="og:image" content="logo.jpeg">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Outfit:wght@300;400;600;900&display=swap');
+
+        :root {
+            --gold: #D4AF37;
+            --gold-bright: #F9E29C;
+            --gold-dark: #996515;
+            --obsidian: #050505;
+        }
+
+        /* Custom Gold Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { 
+            background: linear-gradient(var(--gold-dark), var(--gold)); 
+            border-radius: 10px; 
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(-45deg, #050505, #0a0a0a, #001a4d, #050505);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            scroll-snap-type: y mandatory;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0; left: 0; height: 5px;
+            background: linear-gradient(to right, var(--gold-dark), var(--gold-bright), var(--gold-dark));
+            z-index: 100; width: 0%;
+            box-shadow: 0 0 15px var(--gold);
+        }
+
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            padding: 1.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 90;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        section {
+            height: 100vh;
+            width: 100vw;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 4rem 2rem;
+        }
+
+        .gold-text {
+            background: linear-gradient(90deg, #996515, #F9E29C, #D4AF37, #996515);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+        }
+
+        @keyframes shine { to { background-position: 200% center; } }
+
+        /* Magical Image Transitions */
+        .img-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            background: #000;
+        }
+
+        .img-card img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: grayscale(100%) brightness(0.6);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .img-card:hover img {
+            filter: grayscale(0%) brightness(1.1);
+            transform: scale(1.08);
+        }
+
+        .live-tag {
+            background: #ff0000;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 900;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+        
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars" id="star-container"></div>
+    <div id="progress-bar"></div>
+
+    <nav>
+        <div style="font-family: 'Cinzel', serif;" class="text-xl gold-text font-bold">THB LTD</div>
+        <div class="nav-links flex gap-8 text-[10px] font-black tracking-[0.4em] uppercase">
+            <a href="#hero" class="hover:text-gold transition">Portal</a>
+            <a href="#arsenal" class="hover:text-gold transition">Arsenal</a>
+            <a href="#talent" class="hover:text-gold transition">Crew</a>
+            <a href="#contact" class="hover:text-gold transition">Booking</a>
+        </div>
+        <a href="tel:0794176025" class="bg-gold px-5 py-2 rounded-full text-black text-[10px] font-black tracking-widest shadow-[0_0_15px_rgba(212,175,55,0.4)]">
+            CALL TO BOOK
+        </a>
+    </nav>
+
+    <section id="hero">
+        <div class="z-10 text-center animate__animated animate__fadeIn">
+            <div class="mb-6"><span class="live-tag">LIVE</span> <span class="text-gold tracking-[0.5em] text-xs font-bold ml-2">EST. 2024</span></div>
+            <img src="logo.jpeg" class="w-48 h-48 md:w-64 md:h-64 object-contain rounded-[2.5rem] mx-auto mb-8 shadow-2xl border border-gold/30" alt="Triple H Logo">
+            <h1 style="font-family: 'Cinzel', serif;" class="text-6xl md:text-9xl gold-text">TRIPLE H</h1>
+            <p class="tracking-[0.8em] text-gray-400 uppercase text-[10px] md:text-xs mt-6">Statutory Compliant • Companies Act 2021</p>
+        </div>
+    </section>
+
+    <section id="arsenal">
+        <h2 style="font-family: 'Cinzel', serif;" class="text-2xl md:text-3xl gold-text mb-12 tracking-widest uppercase italic">The Sonic Arsenal</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl px-4">
+            <div class="img-card h-64 md:h-80"><img src="piano.jpeg" alt="Piano"></div>
+            <div class="img-card h-64 md:h-80"><img src="bass.jpeg" alt="Bass"></div>
+            <div class="img-card h-64 md:h-80"><img src="drums.jpeg" alt="Drums"></div>
+        </div>
+    </section>
+
+    <section id="talent">
+        <h2 style="font-family: 'Cinzel', serif;" class="text-2xl md:text-3xl gold-text mb-12 tracking-widest uppercase">The Elite Crew</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-5xl px-4">
+            <div class="img-card h-40 md:h-60"><img src="pic1.jpeg" alt="Crew"></div>
+            <div class="img-card h-40 md:h-60"><img src="pic2.jpeg" alt="Crew"></div>
+            <div class="img-card h-40 md:h-60"><img src="pic3.jpeg" alt="Crew"></div>
+            <div class="img-card h-40 md:h-60"><img src="pic4.jpeg" alt="Crew"></div>
+            <div class="img-card h-40 md:h-60"><img src="pic5.jpeg" alt="Crew"></div>
+            <div class="img-card h-40 md:h-60"><img src="pic6.jpeg" alt="Crew"></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="text-center z-10">
+            <h2 class="text-4xl md:text-6xl font-black mb-12 gold-text tracking-tighter uppercase italic">Direct Channel</h2>
+            <div class="flex gap-8 md:gap-12 justify-center mb-16">
+                <a href="https://www.instagram.com/_triplehband" target="_blank" class="text-4xl md:text-5xl hover:scale-125 transition text-white hover:text-gold"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@triple.h.band" target="_blank" class="text-4xl md:text-5xl hover:scale-125 transition text-white hover:text-gold"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="mailto:triplehband67@gmail.com" class="text-4xl md:text-5xl hover:scale-125 transition text-white hover:text-gold"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            
+            <a href="tel:0794176025" class="inline-block p-[2px] bg-gradient-to-r from-gold via-white to-gold rounded-2xl animate-pulse">
+                <div class="bg-black px-10 py-5 rounded-xl hover:bg-transparent transition duration-500 group">
+                    <p class="text-gold group-hover:text-black font-black text-2xl md:text-5xl tracking-tighter">0794176025</p>
+                </div>
+            </a>
+            <p class="mt-8 text-gray-400 tracking-[0.2em] text-[10px] font-bold uppercase">Jazz • Gospel • Afro • Pop • Blues • Reggae • Hip-Hop</p>
+        </div>
+
+        <div class="absolute bottom-8 w-full text-center px-4">
+            <p class="text-[8px] tracking-[0.5em] text-gray-500 uppercase">© 2025 TRIPLE H BAND LIMITED | ALL RIGHTS RESERVED | STATUTORY COMPLIANT</p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth Progress Scroll
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        // Magical Floating Stars
+        const starContainer = document.getElementById('star-container');
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.position = 'absolute';
+            star.style.width = Math.random() * 2 + 'px';
+            star.style.height = star.style.width;
+            star.style.background = 'white';
+            star.style.borderRadius = '50%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.opacity = Math.random() * 0.5;
+            star.style.boxShadow = '0 0 8px #F9E29C';
+            
+            star.animate([
+                { transform: 'translateY(0)', opacity: 0.2 },
+                { transform: `translateY(-${Math.random() * 80}px)`, opacity: 0.7 },
+                { transform: 'translateY(0)', opacity: 0.2 }
+            ], {
+                duration: 4000 + Math.random() * 4000,
+                iterations: Infinity
+            });
+            starContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>
